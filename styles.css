@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+* ::before,
+*::after{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: #F8F8F8;
+    font-family: 'Roboto', sans-serif;   
+    
+}
+
+     /* css variable */
+:root{
+    --primary-color:#FFB6C1;
+    --secondary-color:#40E0D0;
+    --Highlight: #8484dc;
+    --heading:#40356f;
+    --text: #333333;
+    --white: #FFFFFF;
+    --black:#000;
+    --link:#800080;
+    --transition: all 0.5s ease-in-out;
+}
+
+header{
+    position: relative;
+    z-index: 1000;
+}
+.bg-light{
+      background-color:#FFFFFF !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+/* Customize the look of the navbar */
+.navbar {
+    padding: 1rem 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--text);
+    margin: 5px;
+    font-size: 18px;    
+    font-weight: 400;
+}
+.logo img{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: -60px;
+    left: 40px;
+}
+
+.fixed-top {
+    background:white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    
+    
+  }
+
+
+.navbar-nav .nav-item.active .nav-link {
+    background-color: var(--primary-color); 
+    color:var(--text); 
+}
+
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.sticky-buttons {
+    color: var(--text);
+    margin-left: 50px;
+}
+
+.sticky-buttons .btn-success{
+background-color: var(--secondary-color);
+border: var(--secondary-color);
+}
+/* .sticky-buttons .btn {
+    margin-left: 10px;
+} */
+
+/* hero section */
+/* hero section */
+.hero-section{
+    background-image: url('3.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    
+   
+    
+   
+}
+.hero-section .container{
+background: linear-gradient(to right, #40E0D0 0%, #40E0D0 45%, transparent 45%, transparent 100%);
+width: 100%;
+
+}
+.hero-section .btn-primary{
+background-color: var(--secondary-color);
+border: 2px solid var(--secondary-color);
+}
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0 0 0;
+    min-width: 0%;
+     height: 750px;
+     
+}
+.hero-text-container{
+    position: absolute;
+    right: -40px;
+    top: 0;
+    bottom: 0;
+    background: var(--white);
+    /* border-radius: 50%; */
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    /* margin: auto; */
+    margin-top: -455px;
+    padding: 600px 400px 210px 350px;
+    
+    
+}
+.hero-text{
+    position: absolute;
+    bottom: 350px;
+    left: 130px;
+    width: 50%;
+}
+/* About */
+.about-section {
+    background-color: #F8F8F8; 
+    padding: 80px 0; 
+}
+
+.about-section .section-title {
+    color: var(--secondary-color); 
+}
+.what-we-do-section h2{
+font-size: 16px;
+font-weight: bold;
+}
+.what-we-do-section .lead{
+    color:var(--heading);
+    font-size: 30px;
+    font-weight: bolder;
+    /* width: 50%; */
+    /* margin-left: -30px; */
+    padding:5px 100px 20px 100px;
+
+}
+.what-we-do-section .what-we-do-container{
+background: var(--white);
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+padding: 30px;
+height: 350px;
+}
+.what-we-do-container h3{
+    color: var(--heading);
+}
+.what-we-do-container p{
+    color: var(--text);
+}
+.what-we-do-container .fa{
+    color: var(--secondary-color);
+}
+
+/* where we are */
+.where-we-are-section{
+    padding: 80px 0; 
+}
+.where-we-are-section h2{
+    font-size: 16px;
+    font-weight: bold;
+    color:var(--secondary-color);
+}
+.google-map{
+padding-bottom: 50%;
+position: relative;
+}
+.google-map iframe{
+height: 100%;
+width: 100%;
+left: 0;
+top:0 ;
+position: absolute;
+}
+.where-we-are-section .lead{
+    text-align: left;
+    color: var(--text);
+}
+/* How we work */
+.how-we-work-section {
+    background-color: #F8F8F8; 
+    padding: 80px 0; 
+}
+.how-we-work-section .section-title {
+    color: var(--secondary-color);
+}
+
+.how-we-work-section h3 {
+    color: var(--heading); 
+}
+.how-we-work-container{
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    height: 350px;
+}
+.how-we-work-section h2{
+    font-size: 16px;
+    font-weight: bold;
+    }
+
+/* success stories*/
+.success-stories-section {
+    background-color: var(--white);
+    padding: 80px 0; 
+}
+
+.success-stories-section .section-title {
+    color: var(--secondary-color); 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.carousel-caption {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+}
+.carousel-caption h3 {
+    color: var(--heading); 
+}
+.carousel-caption p {
+    color: var(--text); 
+}
+
+.carousel-indicators li{
+background-color: var(--secondary-color);
+}
+
+.success-stories-section .btn-primary{
+background-color: var(--secondary-color);
+border-color: var(--secondary-color);
+}
+
+/* Join movement*/
+.join-movement-section {
+    padding: 80px 0;
+}
+
+.join-movement-section .section-title {
+    color: var(--secondary-color); 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.join-movement-section h3 {
+    color: var(--heading); 
+}
+.join-movement-container{
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    height: 350px;
+}
+
+.progress-bar.bg-success {
+    background-color: var(--Highlight); 
+}
+/* our impact */
+.impact-counter-section .container{
+background:rgba(64, 224, 208, 0.2);
+/* background: var(--secondary-color); */
+}
+ .impact-counter-section .Mentored, .Awarded, .Trained{
+border-right:2px solid #FFFFFF;
+
+
+}
+.impact-counter-section .impact-counter{
+    padding: 30px;
+    color: var(--Highlight);
+}
+.impact-counter-section .section-title{
+    padding: 10px;
+    color: var(--heading);
+    font-size: 16px;
+    font-weight: bold;
+}
+/* get involved */
+.get-involved-section {
+    background-color: #F8F8F8; 
+    padding: 80px 0; 
+}
+
+.get-involved-section .section-title {
+    color: var(--secondary-color); 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.get-involved-section h3 {
+    color: var(--heading); 
+}
+.get-involved-container{
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    height: 350px;
+}
+.blog-section{
+    padding: 80px 0; 
+}
+.blog-section .section-title{
+    color: var(--secondary-color); 
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.blog-section .blog-post{
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 650px;
+
+}
+.blog-section .blog-text{
+padding: 30px;
+}
+.blog-section .blog-title{
+    color: var(--heading);
+}
+.blog-section .btn-primary{
+    background: var(--secondary-color);
+    border: var(--secondary-color);
+}
+
+
+/* Add your custom styles here */
+.footer-section {
+    background-color: var(--text); 
+    color: var(--white); 
+    padding: 30px 0; 
+}
+
+.footer-section h4 {
+    color: var(--secondary-color);
+}
+
+.social-media-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media-list a {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.legal-links {
+    list-style: none;
+    padding: 0;
+}
+
+.legal-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
