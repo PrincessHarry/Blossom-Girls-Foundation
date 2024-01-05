@@ -54,8 +54,9 @@ header{
     height: 200px;
     position: absolute;
     top: -60px;
-    left: 40px;
+    left: 10px;
 }
+
 
 .fixed-top {
     background:white;
@@ -84,11 +85,27 @@ header{
 background-color: var(--secondary-color);
 border: var(--secondary-color);
 }
-/* .sticky-buttons .btn {
-    margin-left: 10px;
-} */
+.navbar-toggler{
+    background-color: var(--secondary-color);
+    margin-right: 1.5rem;
+}
 
-/* hero section */
+@media (max-width: 767px) {
+    .sticky-buttons {
+        margin-left: 0;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+.sticky-buttons .btn{
+    font-size: 0.8rem;
+}
+    .sticky-buttons .col-md-4{
+        margin-bottom: 10px;
+    }
+    .logo img{
+    left: -0.8rem;
+}
+}
 /* hero section */
 .hero-section{
     background-image: url('3.jpeg'); 
@@ -100,7 +117,7 @@ border: var(--secondary-color);
    
 }
 .hero-section .container{
-background: linear-gradient(to right, #40E0D0 0%, #40E0D0 45%, transparent 45%, transparent 100%);
+background: linear-gradient(to right, #40E0D0 0%, #40E0D0 35%, transparent 35%, transparent 100%);
 width: 100%;
 
 }
@@ -120,7 +137,7 @@ border: 2px solid var(--secondary-color);
 }
 .hero-text-container{
     position: absolute;
-    right: -40px;
+    right: -130px;
     top: 0;
     bottom: 0;
     background: var(--white);
@@ -136,17 +153,64 @@ border: 2px solid var(--secondary-color);
 .hero-text{
     position: absolute;
     bottom: 350px;
-    left: 130px;
+    left: 200px;
     width: 50%;
 }
+@media (max-width: 767px) {
+    .hero-section .container{
+background: None;
+    }
+    .hero {
+        justify-content: flex-end; 
+        height: 450px; 
+        position: relative; 
+    }
+    .hero-text-container{
+       position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 0;
+        margin-top: 0;
+        padding: 105px 50px 105px 50px;
+        
+    }
+    .hero-text{
+        position: relative;
+        bottom: auto;
+        top: -140px;
+        left: 30px;
+        
+        width: 100%;
+        
+    }
+    .hero-text h1{
+font-size: 1.8rem;
+padding-top:60px;
+font-weight: bold;
+    }
+    .hero-section .btn-lg {
+       font-size: 1rem;
+       margin-top: -10px;
+       padding: 0.2rem 0.8rem;
+    }
+}
+
 /* About */
 .about-section {
     background-color: #F8F8F8; 
-    padding: 80px 0; 
+    padding: 80px 20px; 
+   
 }
 
 .about-section .section-title {
     color: var(--secondary-color); 
+}
+.about-section p{
+    text-align: left;
 }
 .what-we-do-section h2{
 font-size: 16px;
@@ -176,10 +240,17 @@ height: 350px;
 .what-we-do-container .fa{
     color: var(--secondary-color);
 }
-
+@media (max-width: 767px) {
+    .what-we-do-section .lead{
+        font-size:1rem;
+        padding:5px;
+        text-align: center;
+    
+    }
+}
 /* where we are */
 .where-we-are-section{
-    padding: 80px 0; 
+    padding: 80px 20px; 
 }
 .where-we-are-section h2{
     font-size: 16px;
@@ -204,20 +275,24 @@ position: absolute;
 /* How we work */
 .how-we-work-section {
     background-color: #F8F8F8; 
-    padding: 80px 0; 
+    padding: 80px 20px;
+    
+}
+.how-we-work-section p{
+    text-align: left;
 }
 .how-we-work-section .section-title {
     color: var(--secondary-color);
 }
 
 .how-we-work-section h3 {
-    color: var(--heading); 
+    color: var(--heading);
 }
 .how-we-work-container{
     background: var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    height: 350px;
+    /* height: 350px; */
 }
 .how-we-work-section h2{
     font-size: 16px;
@@ -259,7 +334,11 @@ border-color: var(--secondary-color);
 
 /* Join movement*/
 .join-movement-section {
-    padding: 80px 0;
+    padding: 80px 20px;
+    
+}
+.join-movement-section p{
+text-align: left;
 }
 
 .join-movement-section .section-title {
@@ -270,17 +349,16 @@ border-color: var(--secondary-color);
 
 .join-movement-section h3 {
     color: var(--heading); 
+    text-align: left;
 }
 .join-movement-container{
     background: var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    height: 350px;
+    /* height: 350px; */
 }
 
-.progress-bar.bg-success {
-    background-color: var(--Highlight); 
-}
+
 /* our impact */
 .impact-counter-section .container{
 background:rgba(64, 224, 208, 0.2);
@@ -301,10 +379,18 @@ border-right:2px solid #FFFFFF;
     font-size: 16px;
     font-weight: bold;
 }
+@media (max-width: 767px) {
+    .impact-counter-section .Mentored, .Awarded, .Trained{
+        border-bottom:2px solid #FFFFFF;
+        border-right: 0;
+        
+        
+        }
+}
 /* get involved */
 .get-involved-section {
     background-color: #F8F8F8; 
-    padding: 80px 0; 
+    padding: 80px 20px; 
 }
 
 .get-involved-section .section-title {
@@ -312,15 +398,22 @@ border-right:2px solid #FFFFFF;
     font-size: 16px;
     font-weight: bold;
 }
-
+.get-involved-section p{
+    text-align: left;
+}
 .get-involved-section h3 {
+    text-align: left;
     color: var(--heading); 
+}
+.get-involved-section .btn-primary{
+    background: var(--secondary-color);
+    border: var(--secondary-color);
 }
 .get-involved-container{
     background: var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    height: 350px;
+    /* height: 350px; */
 }
 .blog-section{
     padding: 80px 0; 
@@ -334,7 +427,7 @@ border-right:2px solid #FFFFFF;
 .blog-section .blog-post{
     background: var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    height: 650px;
+    /* height: 650px; */
 
 }
 .blog-section .blog-text{
