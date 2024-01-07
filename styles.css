@@ -9,21 +9,22 @@
 body{
     padding: 0;
     margin: 0;
-    background: #F8F8F8;
+    background: #f5f5f5;
     font-family: 'Roboto', sans-serif;   
     
 }
 
      /* css variable */
 :root{
-    --primary-color:#FFB6C1;
-    --secondary-color:#40E0D0;
-    --Highlight: #8484dc;
+    --primary-color:#008080;
+    --secondary-color:#ff1493;
+    --Highlight: #40E0D0;
     --heading:#40356f;
     --text: #333333;
     --white: #FFFFFF;
     --black:#000;
     --link:#800080;
+    --footer:#E6E6FA;
     --transition: all 0.5s ease-in-out;
 }
 
@@ -44,10 +45,10 @@ header{
     
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: var(--text);
+    color: var(--heading);
     margin: 5px;
     font-size: 18px;    
-    font-weight: 400;
+    font-weight: 500;
 }
 .logo img{
     width: 300px;
@@ -117,7 +118,7 @@ border: var(--secondary-color);
    
 }
 .hero-section .container{
-background: linear-gradient(to right, #40E0D0 0%, #40E0D0 35%, transparent 35%, transparent 100%);
+background: linear-gradient(to right, #ff1493 0%, #ff1493 35%, transparent 35%, transparent 100%);
 width: 100%;
 
 }
@@ -178,6 +179,17 @@ background: None;
         padding: 105px 50px 105px 50px;
         
     }
+    svg {
+        display: inline-block;
+        position: absolute;
+        top: 180px;
+        left: 0;
+        z-index: 1;
+    }
+    /* path {
+        fill: none;
+        stroke: none;
+    } */
     .hero-text{
         position: relative;
         bottom: auto;
@@ -193,15 +205,17 @@ padding-top:60px;
 font-weight: bold;
     }
     .hero-section .btn-lg {
+        position: absolute;
        font-size: 1rem;
        margin-top: -10px;
        padding: 0.2rem 0.8rem;
+       z-index: 999;
     }
 }
 
 /* About */
 .about-section {
-    background-color: #F8F8F8; 
+    background-color: #F5F5F5; 
     padding: 80px 20px; 
    
 }
@@ -274,7 +288,7 @@ position: absolute;
 }
 /* How we work */
 .how-we-work-section {
-    background-color: #F8F8F8; 
+    background-color: #F5F5F5; 
     padding: 80px 20px;
     
 }
@@ -360,9 +374,21 @@ text-align: left;
 
 
 /* our impact */
+.impact-counter-section {
+/* background:rgba(64, 224, 208, 0.2); */
+background: var(--secondary-color);
+background-image: url('2.jpeg');
+background-position: center;
+background-size: cover;
+/* padding: 80px 20px; */
+
+}
 .impact-counter-section .container{
-background:rgba(64, 224, 208, 0.2);
-/* background: var(--secondary-color); */
+    /* background: rgba(0, 0, 0, 0.6); */
+    background: rgba(64, 53, 111, 0.9);
+    max-width: 1400px;
+    
+    
 }
  .impact-counter-section .Mentored, .Awarded, .Trained{
 border-right:2px solid #FFFFFF;
@@ -371,11 +397,19 @@ border-right:2px solid #FFFFFF;
 }
 .impact-counter-section .impact-counter{
     padding: 30px;
-    color: var(--Highlight);
+    
+}
+.counter-value{
+color: var(--white);
+
+}
+.counter-label{
+color:#AAAAAA;
+
 }
 .impact-counter-section .section-title{
     padding: 10px;
-    color: var(--heading);
+    color: var(--secondary-color);
     font-size: 16px;
     font-weight: bold;
 }
@@ -445,7 +479,7 @@ padding: 30px;
 /* Add your custom styles here */
 .footer-section {
     background-color: var(--text); 
-    color: var(--white); 
+    color: var(--text); 
     padding: 30px 0; 
 }
 
@@ -461,7 +495,7 @@ padding: 30px;
 }
 
 .social-media-list a {
-    color: var(--white);
+    color: var(--text);
     font-size: 20px;
 }
 
@@ -471,7 +505,7 @@ padding: 30px;
 }
 
 .legal-links a {
-    color: var(--white);
+    color: var(--text);
     text-decoration: none;
 }
 
